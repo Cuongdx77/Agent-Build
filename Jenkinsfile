@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            docker build -f Dockerfile-sonar -t dotnet-sonarscan --rm .
+            docker build -f Dockerfile-sonar -t dotnet-sonarscan .
           }
     }
     stages {
