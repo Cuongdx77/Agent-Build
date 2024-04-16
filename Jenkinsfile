@@ -1,8 +1,9 @@
 pipeline {
     agent {
-        docker { 
-            docker build -f Dockerfile -t dotnet-sonarscan .
-          }
+        dockerfile {
+            filename 'Dockerfile'
+            label 'my-custom-agent'
+        }
     }
     stages {
         stage('Test') {
