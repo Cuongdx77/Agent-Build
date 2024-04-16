@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            dockerfile true
+            docker build -f Dockerfile-sonar -t dotnet-sonarscan --rm .
           }
     }
     stages {
